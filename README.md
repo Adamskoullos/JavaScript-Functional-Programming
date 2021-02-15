@@ -38,18 +38,19 @@ As cloning is such a core part of functional programming lets look at three obje
 
 - `const drinkTwo = {...drink};`
 
-Using the spread operator to spread an array or object into a new array or object is clean and really nice to use.  Its not perfect though, yes it is immutable however it only clones the top layer.  Therefore if you want to clone an array or object that does not have nesting layers then this is a great option.
+Using the spread operator to spread an array or object into a new array or object is clean and really nice to use.  Its not perfect though, yes it is immutable however it only clones the top layer.  Therefore if you want to clone an array or object that does not have nested layers then this is a great option.
 
 - `const drinkTwo = Object.assign({}, drink);`
 
-The above pattern also only provides a shallow clone as any nested layers although are included (unlike spreading) are however only a reference to the original object and thus are mutable.
+The above pattern also only provides a shallow clone as any nested layers although included (unlike spreading) are however only a reference to the original object and thus are mutable.
 
 To recap so far, for top level cloning either of the above does the job, however for a true deep clone we want to use this next pattern:
 
 - `const drinkTwo = JSON.parse(JSON.stringify(drink));`
 
-Stringify returns the object as a JSON string, then parse returns a new deep clone object and this returned object is assigned to the new variable.
+Stringify returns the object as a JSON string, then parse returns a new deep clone object from the string and this returned object is assigned to the new variable.
 
 There is one caveat to note though, this clone will not include any methods that are in the cloned object.
 
 ----------------------------------------------------------------------------
+
