@@ -34,7 +34,7 @@ A block of code built from pure functions is easier to reason about and test and
 -----------------------------------------------------------------------------------------------------------------------------
 
 ## Cloning
-As cloning is such a core part of functional programming lets look at three object cloning patterns and the naunces between them. Understading the differences now will also reduce debugging later. 
+As cloning is such a core part of functional programming lets look at three object cloning patterns and the nuances between them. Understanding the differences now will also reduce debugging later. 
 
 - `const drinkTwo = {...drink};`
 
