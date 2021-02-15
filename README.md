@@ -6,7 +6,8 @@
 
 ### ToC:
 
-[Definition & Introduction](##Definition-&-Introduction)
+[Definition & Introduction](##Definition-&-Introduction)<br>
+[Cloning](##Cloning)
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -26,10 +27,29 @@ Pure functions do not cause **side effects**, meaning they do not affect any var
 
 We touched on **avoiding shared state** above, this refers to an object that is either global or within a closure scope but outside the scope of any functions that alter it's state.  A shared state exists when this objects state is altered by more than one function.  To prevent this, no function mutates the object and then returns a reference to the object, but instead clones the object first returning a new object that is then passed on with its new state to the next function.  To recap, state is not shared, it is passed from one function to another.
 
-**Functional programming is declarative rather than imperative**
+**Functional programming is declarative rather than imperative**. In practical terms this means using JavaScript built in methods where possible, for example filter, map, reduce.  This has major benefits, firstly we write less code and can keep things cleaner. Also its much easier to reason about a chain of built in JavaScript methods than to try and decipher custom functions that someone else has written.  A lot of these methods also make a copy, for example map works like forEach but makes a copy first, slice also returns a new array.  In fact reduce is used in the construction of the pipe function which we will dive into later. 
 
-A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own of eliminating many typical bugs during development.
+A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own: eliminating many typical bugs during development.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-As cloning is such a core part of functional programming lets look at each object cloning pattern and the naunces between them. Understadning the differences now will also reduce debugging later:
+## Cloning
+As cloning is such a core part of functional programming lets look at three object cloning patterns and the naunces between them. Understading the differences now will also reduce debugging later. 
+
+- `const drinkTwo = {...drink};`
+
+Using the spread operator to spread an array or object into a new array or object is clean and really nice to use.  Its not perfect though, yes it is immutable however it only clones the top layer.  Therefore if you want to clone an array or object that does not have nesting layers then this is a great option.
+
+- `const drinkTwo = Object.assign({}, drink);`
+
+The above pattern also only provides a shallow clone as any nested layers although are included (unlike spreading) are however only a reference to the original object and thus are mutable.
+
+To recap so far, for top level cloning either of the above does the job, however for a true deep clone we want to use this next pattern:
+
+- `const drinkTwo = JSON.parse(JSON.stringify(drink));`
+
+Stringify returns the object as a JSON string, then parse returns a new deep clone object and this returned object is assigned to the new variable.
+
+There is one caveat to note though, this clone will not include any methods that are in the cloned object.
+
+----------------------------------------------------------------------------
