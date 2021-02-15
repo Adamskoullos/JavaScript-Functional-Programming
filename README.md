@@ -26,4 +26,6 @@ We touched on **avoiding shared state** above, this refers to an object that is 
 
 **Functional programming is declarative rather than imperative**
 
-A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Also pure functions only work with their arguments and do not mutate them, they return the output in a new variable.   
+A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own of eliminating many typical bugs during development.
+
+Before we move on lets look at each object cloning pattern and the naunces between them. As this is such a core part of the functional style understadning the differences now will also reduce debugging later:
