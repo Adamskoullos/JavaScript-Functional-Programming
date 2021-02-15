@@ -6,10 +6,11 @@
 
 ### ToC:
 
-[Defining & Purpose](##Defining-&-Purpose)
+[Definition & Introduction](##Definition-&-Introduction)
+------------------------------------------------------------------------------------------------------------------------------
 
 
-## Defining & Purpose
+## Definition & Introduction
 There are many advantages to adding functional style coding to a project whether it is used almost exclusively or in conjunction with other styles like OOP.
 
 Below is a definition of the functional approach as quoted by Eric Elliot, who is an expert in this field:
@@ -27,5 +28,6 @@ We touched on **avoiding shared state** above, this refers to an object that is 
 **Functional programming is declarative rather than imperative**
 
 A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own of eliminating many typical bugs during development.
+-----------------------------------------------------------------------------------------------------------------------------
 
-Before we move on lets look at each object cloning pattern and the naunces between them. As this is such a core part of the functional style understadning the differences now will also reduce debugging later:
+As cloning is such a core part of functional programming lets look at each object cloning pattern and the naunces between them. Understadning the differences now will also reduce debugging later:
