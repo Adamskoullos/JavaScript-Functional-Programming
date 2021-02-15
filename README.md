@@ -22,7 +22,7 @@ This is an extremely concise definition and one that is difficult at first to fu
 
 Pure functions do not cause **side effects**, meaning they do not affect any variable outside the scope of the function. Side note, the closure scope is regarded as outside the scope of the function when talking about shared state and side effects.  This includes triggering other functions that do have side effects.  One thing to note here is being mindful of making a true copy of an input before working on it and not just referencing and mutating the original data. More on this later.  
 
-We touched on**avoiding shared state** above, this refers to an object that is either global or within a closure scope but outside the scope of any functions that alter its state.  A shared state exists when this objects state is altered by more than one function.  To prevent this, no function returns a mutated reference to the object but instead clones the object first returning a new object that is then passed on to other functions.  More on this later.
+We touched on **avoiding shared state** above, this refers to an object that is either global or within a closure scope but outside the scope of any functions that alter it's state.  A shared state exists when this objects state is altered by more than one function.  To prevent this, no function mutates the object and then returns a reference to the object, but instead clones the object first returning a new object that is then passed on with its new state to the next function.  To recap, state is not shared, it is passed from one function to another.
 
 **Functional programming is declarative rather than imperative**
 
