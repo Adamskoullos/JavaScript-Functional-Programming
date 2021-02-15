@@ -18,9 +18,11 @@ Below is a definition of the functional approach as quoted by Eric Elliot, who i
 
 This is an extremely concise definition and one that is difficult at first to fully grasp so lets break it down before moving on:
 
-**Pure functions** only work with data that is passed in, they do not mutate this data and they do not effect any other data that is not within the scope of the function. And finally, everyone has heard this one, given the same input a pur function will always produce the same output.
+**Pure functions** only work with data that is passed in, they do not mutate this data and they do not effect any other data that is not within the scope of the function. And finally, everyone has heard this one, given the same input a pure function will always produce the same output.
 
-**Avoiding shared state**
+Pure functions do not cause **side effects**, meaning they do not affect any variable outside the scope of the function. Side note, the closure scope is regarded as outside the scope of the function when talking about shared state and side effects.  This includes triggering other functions that do have side effects.  One thing to note here is being mindful of making a true copy of an input before working on it and not just referencing and mutating the original data. More on this later.  
+
+We touched on**avoiding shared state** above, this refers to an object that is either global or within a closure scope but outside the scope of any functions that alter its state.  A shared state exists when this objects state is altered by more than one function.  To prevent this, no function returns a mutated reference to the object but instead clones the object first returning a new object that is then passed on to other functions.  More on this later.
 
 **Functional programming is declarative rather than imperative**
 
