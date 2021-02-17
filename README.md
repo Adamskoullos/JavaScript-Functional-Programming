@@ -7,7 +7,8 @@
 ### ToC:
 
 [Definition and Introduction](#Definition-and-Introduction)<br>
-[Cloning](#Cloning)
+[Cloning](#Cloning)<br>
+[Singular Reusable Pattern](#-Singular-Reusable-Pattern)<br>
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,4 +70,6 @@ Or nested as callbacks which is at the heart of function composition.  The trick
 ![Screenshot from 2021-02-17 07-08-51](https://user-images.githubusercontent.com/73107656/108168759-bcaed080-70ef-11eb-8631-7c86c6ecce2d.png)
 
 Later we will compose these functions into a pipe, building the pipe from the ground up.
+
+--------------------------------------------------------------------
 
