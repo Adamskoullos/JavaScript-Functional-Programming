@@ -104,4 +104,8 @@ Compose and Pipe are functions that let us easily use singular functions as buil
 
 ## Arity and Currying
 
-When a function takes a single input it has an arity of one. When composing a pipe we only want to pass one input in and out of each function, so if functions within the pipe require more than one input currying is used to manage this. Currying takes care of the extra arguments so the pipe only deals with the main object being passed and worked on.
+When a function takes a single input it has an arity of one. When composing a pipe we only want the pipe to deal with one input in and out of each function, so if functions within the pipe require more than one input currying is used to manage this. Currying takes care of the first arguments so the pipe only deals with the last argument being passed and worked on by each individual function.
+
+------**Currying deep dive section to be added here**------
+
+--------------------------------------------------------------------- 
