@@ -10,6 +10,7 @@
 [Cloning](#Cloning)<br>
 [Singular Reusable Pattern](#Singular-Reusable-Pattern)<br>
 [Arrow Functions](#Arrow-Functions)<br>
+[Composing a Pipe](#Pipe)<br>
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -92,3 +93,12 @@ This is an arrow function using the curly braces and return keyword as there is 
 ![Screenshot from 2021-02-17 08-49-38](https://user-images.githubusercontent.com/73107656/108179079-179af480-70fd-11eb-924e-3db0703ce846.png)
 
 ------------------------------------------------------------------
+
+## Pipe
+
+Compose and Pipe are functions that let us easily use singular functions as building blocks to create more complex reusable functions. Compose is constructed using reduceRight and Pipe uses reduce.  We will focus on Pipe as it allows us to compose new functions from left to right and top to bottom as apposed to Compose which is back to front and upside down. First we will create the Pipe function, then we will compose a complex function using our new pipe.
+
+![Screenshot from 2021-02-17 10-37-39](https://user-images.githubusercontent.com/73107656/108192636-6bf9a080-710c-11eb-870b-43cb23a2a9df.png)
+
+------------------------------------------------------------
+
