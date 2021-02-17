@@ -54,3 +54,19 @@ There is one caveat to note though, this clone will not include any methods that
 
 ----------------------------------------------------------------------------
 
+## Singular Reusable Pattern
+
+Below is one example of the smallest building block.  This includes a single function that does one task, takes an input, makes a copy and returns a new value. It can be chained and used as part of a larger composition.  Depending on experience, different levels of conciseness are more readable to each dev so I will refactor the same example:
+
+![Screenshot from 2021-02-17 06-39-50](https://user-images.githubusercontent.com/73107656/108165778-09dc7380-70eb-11eb-98ef-fc178955dbee.png)
+
+Even as of writing this as I look at the arrow function, my eyes just glaze over, I know what it does but just find it quicker to reason about the first two. Of course this is all about experience and at some point I will just get bored writing the others only to refactor them. These patterns are similar which ever built in method is used and using them thereafter is the same. They can be used on there own, or layered with each return value being saved to a new variable:
+
+![Screenshot from 2021-02-17 06-56-24](https://user-images.githubusercontent.com/73107656/108167235-48732d80-70ed-11eb-9bc3-4bd706ad91d9.png)
+
+Or nested as callbacks which is at the heart of function composition.  The trick is to work from in to out which is how they are layered on the call stack.    
+
+![Screenshot from 2021-02-17 07-08-51](https://user-images.githubusercontent.com/73107656/108168759-bcaed080-70ef-11eb-8631-7c86c6ecce2d.png)
+
+Later we will compose these functions into a pipe, building the pipe from the ground up.
+
