@@ -6,13 +6,13 @@
 
 ### ToC:
 
-[Definition & Introduction](##Definition-&-Introduction)<br>
-[Cloning](##Cloning)
+[Definition and Introduction](#Definition-and-Introduction)<br>
+[Cloning](#Cloning)
 
 ------------------------------------------------------------------------------------------------------------------------------
 
 
-## Definition & Introduction
+## Definition and Introduction
 There are many advantages to adding functional style coding to a project whether it is used almost exclusively or in conjunction with other styles like OOP.
 
 Below is a definition of the functional approach as quoted by Eric Elliot, who is an expert in this field:
