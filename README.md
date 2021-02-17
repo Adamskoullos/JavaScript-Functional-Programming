@@ -61,7 +61,11 @@ Below is one example of the smallest building block.  This includes a single fun
 
 ![Screenshot from 2021-02-17 06-39-50](https://user-images.githubusercontent.com/73107656/108165778-09dc7380-70eb-11eb-98ef-fc178955dbee.png)
 
-Even as of writing this as I look at the arrow function, my eyes just glaze over, I know what it does but just find it quicker to reason about the first two. Of course this is all about experience and at some point I will just get bored writing the others only to refactor them. These patterns are similar which ever built in method is used and using them thereafter is the same. They can be used on there own, or layered with each return value being saved to a new variable:
+When using arrow functions if there is only one argument parentheses are not needed and side note, if curly braces are used (when there is more than one statement), the return keyword is required:
+
+![Screenshot from 2021-02-17 08-30-52](https://user-images.githubusercontent.com/73107656/108176925-7c088480-70fa-11eb-94ba-cf2d01db3d3e.png)
+
+These patterns are similar which ever built in method is used and using them thereafter is the same. They can be used on there own, or layered with each return value being saved to a new variable:
 
 ![Screenshot from 2021-02-17 06-56-24](https://user-images.githubusercontent.com/73107656/108167235-48732d80-70ed-11eb-9bc3-4bd706ad91d9.png)
 
@@ -72,4 +76,18 @@ Or nested as callbacks which is at the heart of function composition.  The trick
 Later we will compose these functions into a pipe, building the pipe from the ground up.
 
 --------------------------------------------------------------------
+## Arrow Functions
 
+The first example is of a function not using an arrow function:
+
+![Screenshot from 2021-02-17 08-47-12](https://user-images.githubusercontent.com/73107656/108178839-d1459580-70fc-11eb-9a1e-67b4e2f41873.png)
+
+This is the same function using the arrow function pattern:
+
+![Screenshot from 2021-02-17 08-48-48](https://user-images.githubusercontent.com/73107656/108178983-fc2fe980-70fc-11eb-88d8-ff2623baeace.png)
+
+This is an arrow function using the curly braces and return keyword as there is more than one statement:
+
+![Screenshot from 2021-02-17 08-49-38](https://user-images.githubusercontent.com/73107656/108179079-179af480-70fd-11eb-924e-3db0703ce846.png)
+
+------------------------------------------------------------------
