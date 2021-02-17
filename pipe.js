@@ -32,4 +32,5 @@ const totalAllScores = pipe(
 
 // Using the new complex reusable function
 console.log(totalAllScores(scores));
+console.log(scores);
 

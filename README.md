@@ -32,7 +32,7 @@ We touched on **avoiding shared state** above, this refers to an object that is 
 
 **Functional programming is declarative rather than imperative**. In practical terms this means using JavaScript built in methods where possible, for example filter, map, reduce.  This has major benefits, firstly we write less code and can keep things cleaner. Also its much easier to reason about a chain of built in JavaScript methods than to try and decipher custom functions that someone else has written.  A lot of these methods also make a copy, for example map works like forEach but makes a copy instead of mutating the original data and slice also returns a new array.  In fact reduce is used in the construction of the pipe function which we will dive into later. 
 
-A block of code built from pure functions is easier to reason about and test and each individual function can be reused used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own: eliminating many typical bugs during development.
+A block of code built from pure functions is easier to reason about and test and each individual function can be reused and used as a building block to easily compose larger functions to solve different tasks.  Managing state seems to be more robust and the conscious effort to never mutate data has a side effect of its own: eliminating many typical bugs during development.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
